@@ -1,0 +1,10 @@
+server:
+  port: 8080
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/bank_devops
+    username: bank_devops
+    password: admin123
+  jpa:
+    hibernate:
+      ddl-auto: update
