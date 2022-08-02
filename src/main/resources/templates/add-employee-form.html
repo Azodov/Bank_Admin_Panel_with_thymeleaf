@@ -12,19 +12,19 @@
     <h2>Yangi karta ochish</h2>
     <hr/>
     <form th:action="@{/saveEmployee}" th:object="${employee}" method="post">
-        <input type="text" th:field="*{card_holder}" placeholder="Karta egasining F.I.O" class="form-control col-4 mb-4" />
-        <select th:selected="${employee.card_type}" th:field="*{card_type}" class="form-control col-4 mb-4">
+        <input type="text" th:field="*{cardHolder}" placeholder="Karta egasining F.I.O" class="form-control col-4 mb-4" />
+        <select th:selected="${employee.cardType}" th:field="*{cardType}" class="form-control col-4 mb-4">
             <option value="">Karta turini tanlang</option>
             <option value="HUMO">HUMO</option>
             <option value="UZCARD">UZCARD</option>
             <option value="VISA">VISA</option>
         </select>
-        <input type="password" th:field="*{card_pin}" placeholder="Kartaga yangi parol qo'ying" class="form-control col-4 mb-4" />
-        <input type="text" th:field="*{card_billing_address}" placeholder="Xizmat ko'rsatish punkiti" class="form-control col-4 mb-4" />
-        <input type="text" th:field="*{card_billing_city}" placeholder="Karta egasining Yashash manzili" class="form-control col-4 mb-4" />
-        <input type="text" th:field="*{card_billing_zip}" placeholder="Karta egasining pochta indeksi" class="form-control col-4 mb-4" />
-        <input type="text" th:field="*{card_billing_country}" placeholder="Millati" class="form-control col-4 mb-4" />
-        <input type="text" th:field="*{card_billing_phone}" placeholder="Karta egasining Tel raqami" class="form-control col-4 mb-4" />
+        <input type="password" th:field="*{cardPin}" placeholder="Kartaga yangi parol qo'ying" class="form-control col-4 mb-4" />
+        <input type="text" th:field="*{cardBillingAddress}" placeholder="Xizmat ko'rsatish punkiti" class="form-control col-4 mb-4" />
+        <input type="text" th:field="*{cardBillingCity}" placeholder="Karta egasining Yashash manzili" class="form-control col-4 mb-4" />
+        <input type="text" th:field="*{cardBillingZip}" placeholder="Karta egasining pochta indeksi" class="form-control col-4 mb-4" />
+        <input type="text" th:field="*{cardBillingCountry}" placeholder="Millati" class="form-control col-4 mb-4" />
+        <input type="text" th:field="*{cardBillingPhone}" placeholder="Karta egasining Tel raqami" class="form-control col-4 mb-4" />
         <button class="btn btn-success mb-2" type="submit">Saqlash</button>
         <input type="hidden" th:field="*{id}" >
         <button class="btn btn-danger mb-2" type="reset">Tozalash</button>

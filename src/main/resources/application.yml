@@ -2,9 +2,13 @@ server:
   port: 8080
 spring:
   datasource:
-    url: jdbc:postgresql://localhost:5432/bank_devops
-    username: bank_devops
-    password: admin123
+    url: jdbc:postgresql://localhost:5432/bank
+    username: admin
+    password: 0852
+
   jpa:
     hibernate:
       ddl-auto: update
+    show-sql: true
+    properties:
+      show-sql: true

@@ -15,6 +15,7 @@
         <h2>Kartalar ro'yxati</h2>
         <hr/>
         <a th:href="@{/addEmployeeForm}" class="btn btn-primary mb-2">Yangi karta ochish</a>
+        <a th:href="@{/history}" class="btn btn-primary mb-2">Tarix</a>
         <br/><br/>
         <table class="table table-bordered table-striped" id="employee-table">
             <thead>
@@ -34,16 +35,16 @@
             </thead>
             <tbody>
                 <tr th:each="employee: ${employees}">
-                    <td th:text="${employee.card_holder}" />
-                    <td th:text="${employee.card_type}" />
-                    <td th:text="${employee.card_number}" />
-                    <td th:text="${employee.card_balance} " />
-                    <td th:text="${employee.card_created_date}" />
-                    <td th:text="${employee.card_expiration_date}" />
-                    <td th:text="${employee.card_currency}" />
-                    <td th:text="${employee.card_billing_city}" />
-                    <td th:text="${employee.card_billing_phone}" />
-                    <td th:text="${employee.card_status}" />
+                    <td th:text="${employee.cardHolder}" />
+                    <td th:text="${employee.cardType}" />
+                    <td th:text="${employee.cardNumber}" />
+                    <td th:text="${employee.cardBalance} " />
+                    <td th:text="${employee.cardCreatedDate}" />
+                    <td th:text="${employee.cardExpirationDate}" />
+                    <td th:text="${employee.cardCurrency}" />
+                    <td th:text="${employee.cardBillingCity}" />
+                    <td th:text="${employee.cardBillingPhone}" />
+                    <td th:text="${employee.cardStatus}" />
                     <td>
                         <a th:href="@{/showUpdateForm(employeeId=${employee.Id})}" class="btn btn-info">Tahrirlash</a>
                         <a th:href="@{/deleteEmployee(employeeId=${employee.id})}" class="btn btn-danger">O'chirish</a>
