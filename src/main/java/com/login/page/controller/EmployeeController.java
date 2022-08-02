@@ -32,6 +32,7 @@ public class EmployeeController {
         return "login";
     }
 
+
     @GetMapping({"/showEmployess" ,"/list"})
     public ModelAndView getEmployeeList() {
         ModelAndView mav = new ModelAndView("list-employee");
@@ -39,11 +40,20 @@ public class EmployeeController {
         mav.addObject("employees", list);
         return mav;
     }
+
     @GetMapping("/history")
     public ModelAndView getHistory() {
         ModelAndView mav = new ModelAndView("get-history");
         List<History>list = historyRepository.findAll();
         mav.addObject("histories", list);
+        return mav;
+    }
+
+    @GetMapping("/transfer")
+    public ModelAndView transfer() {
+        ModelAndView mav = new ModelAndView("transfer");
+        Transfer transfer = new Transfer();
+        mav.addObject("transfer", transfer);
         return mav;
     }
     @GetMapping("/addEmployeeForm")
@@ -99,7 +109,7 @@ public class EmployeeController {
         return "redirect:/showEmployess";
     }
 
-    @PostMapping("/transfer")
+    @PostMapping("/transaction")
     public String transfer(@ModelAttribute Transfer transfer) {
         Employee fromEmployee = employeeRepository.findByCardNumber(transfer.getFromCardNumber());
         Employee toEmployee = employeeRepository.findByCardNumber(transfer.getToCardNumber());
@@ -154,7 +164,7 @@ public class EmployeeController {
             history.setDescription("Muvaffaqqiyatli");
             historyRepository.save(history);
         }
-        return "redirect:/showEmployess";
+        return "redirect:/history";
     }
 
     @GetMapping("/showUpdateForm")
