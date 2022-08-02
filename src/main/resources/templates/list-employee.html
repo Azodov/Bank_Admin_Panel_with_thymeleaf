@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org"> // Thymeleaf dan foydalanildi va bu back-end dan malumotlarni olish va jo'natishda foydalanildi.
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
     <title>Foydalanuvchilar ro'yxati</title>
     <link rel="stylesheet"
@@ -22,7 +22,7 @@
                     <th>F.I.O</th>
                     <th>Turi</th>
                     <th>Karta raqami</th>
-                    <th>Balansi</th>
+                    <th>Balans</th>
                     <th>Berilgan vaqti</th>
                     <th>Amal qilish muddati</th>
                     <th>Valyuta Turi</th>
@@ -34,19 +34,19 @@
             </thead>
             <tbody>
                 <tr th:each="employee: ${employees}">
-                    <td th:text="${employee.card_holder}" />  // F.I.O (Full Name)
-                    <td th:text="${employee.card_type}" />  // Turi (Type)
-                    <td th:text="${employee.card_number}" /> // Karta raqami (Card Number)
-                    <td th:text="${employee.card_balance} " /> // Balansi (Balance)
-                    <td th:text="${employee.card_created_date}" /> // Berilgan vaqti (Created Date)
-                    <td th:text="${employee.card_expiration_date}" /> // Amal qilish muddati (Expiration Date)
-                    <td th:text="${employee.card_currency}" /> // Valyuta Turi (Currency)
-                    <td th:text="${employee.card_billing_city}" /> // Billing Shaxri (Billing City)
-                    <td th:text="${employee.card_billing_phone}" /> // Telefon raqam (Billing Phone)
-                    <td th:text="${employee.card_status}" /> // Status (Status)
+                    <td th:text="${employee.card_holder}" />
+                    <td th:text="${employee.card_type}" />
+                    <td th:text="${employee.card_number}" />
+                    <td th:text="${employee.card_balance} " />
+                    <td th:text="${employee.card_created_date}" />
+                    <td th:text="${employee.card_expiration_date}" />
+                    <td th:text="${employee.card_currency}" />
+                    <td th:text="${employee.card_billing_city}" />
+                    <td th:text="${employee.card_billing_phone}" />
+                    <td th:text="${employee.card_status}" />
                     <td>
-                        <a th:href="@{/showUpdateForm(employeeId=${employee.Id})}" class="btn btn-info">Tahrirlash</a> // Tahrirlash (Update)
-                        <a th:href="@{/deleteEmployee(employeeId=${employee.id})}" class="btn btn-danger">O'chirish</a> // O'chirish (Delete)
+                        <a th:href="@{/showUpdateForm(employeeId=${employee.Id})}" class="btn btn-info">Tahrirlash</a>
+                        <a th:href="@{/deleteEmployee(employeeId=${employee.id})}" class="btn btn-danger">O'chirish</a>
                     </td>
                 </tr>
             </tbody>
@@ -54,11 +54,11 @@
     </div>
     <script
             src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js">
-    </script> // JQuery (JQuery) Data Table yaratishda ishlatildi sort va hk
+    </script>
     <script
             type="text/javascript"
             src="https://cdn.datatables.net/v/bs4/dt-1.12.1/datatables.min.js">
-    </script> // DataTables malumotlarni izlashda ko'maklashish uchun yordam beradi.
+    </script>
 <script>
     $(document).ready(function() {
         $('#employee-table').DataTable({

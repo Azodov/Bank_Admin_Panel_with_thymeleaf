@@ -13,13 +13,13 @@
     <hr/>
     <form th:action="@{/saveEmployee}" th:object="${employee}" method="post">
         <input type="text" th:field="*{card_holder}" placeholder="Karta egasining F.I.O" class="form-control col-4 mb-4" />
-<!--        <input type="text" th:field="*{card_type}" placeholder="Karta Turini tanlang" class="form-control col-4 mb-4" />-->
         <select th:selected="${employee.card_type}" th:field="*{card_type}" class="form-control col-4 mb-4">
             <option value="">Karta turini tanlang</option>
             <option value="HUMO">HUMO</option>
             <option value="UZCARD">UZCARD</option>
             <option value="VISA">VISA</option>
-        <input type="text" th:field="*{card_pin}" placeholder="Kartaga yangi parol qo'ying" class="form-control col-4 mb-4" />
+        </select>
+        <input type="password" th:field="*{card_pin}" placeholder="Kartaga yangi parol qo'ying" class="form-control col-4 mb-4" />
         <input type="text" th:field="*{card_billing_address}" placeholder="Xizmat ko'rsatish punkiti" class="form-control col-4 mb-4" />
         <input type="text" th:field="*{card_billing_city}" placeholder="Karta egasining Yashash manzili" class="form-control col-4 mb-4" />
         <input type="text" th:field="*{card_billing_zip}" placeholder="Karta egasining pochta indeksi" class="form-control col-4 mb-4" />

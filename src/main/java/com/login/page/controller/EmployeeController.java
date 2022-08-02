@@ -18,15 +18,19 @@ import java.util.List;
 public class EmployeeController {
     @Autowired
     private EmployeeRepository employeeRepository;
-
     @GetMapping("")
     public String login() {
         return "login";
     }
 
+    @GetMapping("/signup")
+    public String signup() {
+        return "sign-up";
+    }
+
     @GetMapping({"/showEmployess" ,"/list"})
     public ModelAndView getEmployeeList() {
-        ModelAndView mav = new ModelAndView("list-employees");
+        ModelAndView mav = new ModelAndView("list-employee");
         List<Employee>list = employeeRepository.findAll();
         mav.addObject("employees", list);
         return mav;
