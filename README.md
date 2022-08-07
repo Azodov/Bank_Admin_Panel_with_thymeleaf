@@ -1,7 +1,28 @@
 
 # E-Bank v1.0
 
+## Features
 
+- Register new clinet and auto generate cards (Uzcard, Humo, Visa)
+- Ability to perform transactions between cards
+- Record and view transaction history
+- Ability to delete, update, create users
+- Find user with any type (Card Number, Full name, Type, Balance, Status, Given time and many more)
+- All data saved secured postgresql database
+
+    
+
+## Installation
+
+Install E-Bank project with cmd
+
+```bash
+  git clone https://github.com/Donik11/Bank_Admin_Panel_with_thymeleaf.git
+
+  cd Bank_Admin_Panel_with_thymeleaf
+
+  java -jar e-bank.jar
+```
 
 
 ## API Reference
@@ -60,26 +81,7 @@
 ## Authors
 
 - [Donik11](https://www.github.com/donik11)
-## Features
 
-- Register new clinet and auto generate cards (Uzcard, Humo, Visa)
-- Ability to perform transactions between cards
-- Record and view transaction history
-- Ability to delete, update, create users
-- Find user with any type (Card Number, Full name, Type, Balance, Status, Given time and many more)
-- All data saved secured postgresql database
-## Installation
-
-Install E-Bank project with cmd
-
-```bash
-  git clone https://github.com/Donik11/Bank_Admin_Panel_with_thymeleaf.git
-
-  cd Bank_Admin_Panel_with_thymeleaf
-
-  java -jar e-bank.jar
-```
-    
 ## Screenshots
 
 ![Login with OAuth v2.0](https://i.ibb.co/fGx3xDJ/image.png)
