@@ -1,6 +1,6 @@
 package com.login.page.repository;
 
-import com.login.page.entity.History;
+import com.login.page.model.History;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

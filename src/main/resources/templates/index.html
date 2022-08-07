@@ -18,14 +18,14 @@
         <div class="text-center mt-4 name">
             E-Bank
         </div>
-        <form class="p-3 mt-3">
+        <form class="p-3 mt-3" th:action="@{/login}" th:object="${employee}" method="post">
             <div class="form-field d-flex align-items-center">
                 <span class="far fa-user"></span>
-                <input type="text" name="cardNumber" id="userName" placeholder="Cardnumber">
+                <input type="text" th:field="*{cardNumber}" name="cardNumber" id="userName" placeholder="Cardnumber">
             </div>
             <div class="form-field d-flex align-items-center">
                 <span class="fas fa-key"></span>
-                <input type="password" name="password" id="pwd" placeholder="Card Pin">
+                <input type="password" th:field="*{cardPin}" name="password" id="pwd" placeholder="Card Pin">
             </div>
             <button class="btn mt-3" type="submit">Kirish</button>
         </form>

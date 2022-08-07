@@ -1,4 +1,4 @@
-package com.login.page.entity;
+package com.login.page.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

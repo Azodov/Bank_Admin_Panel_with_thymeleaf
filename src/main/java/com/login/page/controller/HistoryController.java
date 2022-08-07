@@ -1,8 +1,8 @@
 package com.login.page.controller;
 
-import com.login.page.entity.Employee;
-import com.login.page.entity.History;
-import com.login.page.entity.Transfer;
+import com.login.page.model.Employee;
+import com.login.page.model.History;
+import com.login.page.model.Transfer;
 import com.login.page.repository.EmployeeRepository;
 import com.login.page.repository.HistoryRepository;
 import org.springframework.stereotype.Controller;

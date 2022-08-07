@@ -1,6 +1,20 @@
 server:
   port: 8080
 spring:
+  jackson:
+    serialization:
+      indent-output: true
+  security:
+    oauth2:
+      client:
+        registration:
+          github:
+            client-id: 61b467d2f1384d4455df
+            client-secret: c8dbf22a40b389114b7134fb0aa1d65162f62de2
+          google:
+            client-id: 933893854148-dg6dkjfvl496i853th81s08adtv6fd75.apps.googleusercontent.com
+            client-secret: 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
+
   datasource:
     url: jdbc:postgresql://localhost:5432/bank
     username: admin

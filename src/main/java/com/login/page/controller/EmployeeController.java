@@ -2,7 +2,7 @@ package com.login.page.controller;
 
 import com.login.page.config.CardNumberGenerator;
 import com.login.page.config.GetCalendar;
-import com.login.page.entity.Employee;
+import com.login.page.model.Employee;
 import com.login.page.repository.EmployeeRepository;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
@@ -27,14 +27,6 @@ public class EmployeeController {
         ModelAndView mav = new ModelAndView("list-employee");
         List<Employee>list = employeeRepository.findAll();
         mav.addObject("employees", list);
-        return mav;
-    }
-
-    @GetMapping({"/get" ,"/info"})
-    public ModelAndView getInfo() {
-        ModelAndView mav = new ModelAndView("index");
-        List<Employee>index = employeeRepository.findAll();
-        mav.addObject("index", index);
         return mav;
     }
 
@@ -90,9 +82,6 @@ public class EmployeeController {
         employeeRepository.save(employee);
         return "redirect:/showEmployess";
     }
-
-
-
 
     @GetMapping("/showUpdateForm")
     public ModelAndView showUpdateForm(@RequestParam Long employeeId) {
